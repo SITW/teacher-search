@@ -11,18 +11,46 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="css/index.css">
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <div class="container">
-            <div id='kb_observable'>
-                <p>First name: <input class='input-small pull-right' data-bind="value: first_name, valueUpdate: 'keyup'" /></p>
-                <p>Last name: <input class='input-small pull-right' data-bind="value: last_name, valueUpdate: 'keyup'" /></p>
-                <p>Hello, <span data-bind="text: full_name"> </span>!</p>
+        <div class="wrapper">
+            <header>
+                <div class="top" onclick="location.href='/'">
+                    SITW
+                </div>
+                <div class="line">
+                    <img src="images/line.png" alt="">
+                </div>
+                <div class="bottom">
+                    教師搜尋網
+                </div>
+
+            </header>
+            <div class="container">
+
             </div>
         </div>
+        <footer>
+            Copyright &copy 2013 SITW All Rights Reserved.
+            <a href="http://sitw.tw/", target="_blank">
+            關於我們
+            </a>
+            &
+            <a href="http://blog.sitw.tw/", target="_blank">
+            部落格
+            </a>
+            &
+            <a href="http://member.sitw.tw/", target="_blank">
+            成員
+            </a>
+
+        </footer>
+
+
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -30,7 +58,7 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-42906035-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
