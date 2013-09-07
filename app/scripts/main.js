@@ -29,24 +29,26 @@ require.config({
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
         knockback: '../bower_components/knockback/knockback.min',
-        knockout: './vendor/knockout-2.3.0'
+        knockout: './vendor/knockout-2.3.0',
+        handlebars: '../bower_components/handlebars/handlebars'
     }
 });
 
 require([
     'backbone',
-    'knockout',
-    'knockback'
-], function (Backbone, ko, kb) {
-    var model = new Backbone.Model({first_name: "Planet", last_name: "Earth"});
+    'views/teacher',
+    'collections/teacher',
+    'models/teacher'
+], function (Backbone, teacherView, teachers, teacher) {
 
-    var ViewModel = function(model) {
-      this.first_name = kb.observable(model, 'first_name');
-      this.last_name = kb.observable(model, 'last_name');
-      this.full_name = ko.computed((function() {return "" + (this.first_name()) + " " + (this.last_name());}), this);
-    };
+    // models
+    var teacher = new teacher();
 
-    var view_model = new ViewModel(model);
+    // collections
+    var teachers = new teachers({model: teacher})
+    teachers.getData();
 
-    ko.applyBindings(view_model, $('#kb_observable')[0]);
+    // views
+    var viewTeacherList = new teacherView({collection: teachers});
+    viewTeacherList.render();
 });
