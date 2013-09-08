@@ -36,10 +36,15 @@ require.config({
 
 require([
     'backbone',
+    'routes/major',
     'views/teacher',
     'collections/teacher',
     'models/teacher'
-], function (Backbone, teacherView, teachers, teacher) {
+], function (Backbone, majorRoute, teacherView, teachers, teacher) {
+
+    var majorRoute = new majorRoute();
+
+    Backbone.history.start();
 
     // models
     var teacher = new teacher();
