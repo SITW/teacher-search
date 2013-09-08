@@ -6,6 +6,13 @@ body{
 .container{
     margin-top:6px;
 }
+
+#teacher_container {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .wrapper{
 	text-align: center;
 }
@@ -30,8 +37,11 @@ header{
 /*header end*/
 td {
 	text-align: center;
-	line-height: 200%;
+	line-height: 20px;
+    width: 100px;
+    height: 20px;
 	border: 1px solid #CCC;
+    overflow: scroll;
 }
 .select{
 	font-family: 'Alegreya SC', serif;

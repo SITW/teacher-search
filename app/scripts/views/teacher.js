@@ -4,31 +4,28 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates',
-    'views/major',
-    'models/major'
-], function ($, _, Backbone, JST, majorItemView, major) {
+    'templates'
+], function ($, _, Backbone, JST) {
     'use strict';
 
     var TeacherView = Backbone.View.extend({
 
-        el: '#select-ul',
+        el: '#teacher_container',
 
-        template: JST['app/scripts/templates/majorlist.ejs'],
+        template: JST['app/scripts/templates/teacher.ejs'],
 
         initialize: function () {
-            _.bindAll(this, 'majorlist', 'render');
-            this.collection.bind('add', this.majorlist);
         },
 
-        majorlist: function (item) {
-            var majorItem = new majorItemView({model: item});
-            $(this.el).append(majorItem.render().el);
-        },
-
-        render: function() {
-            this.collection.each(this.majorlist);
+        render: function (data) {
+            console.log('render');
+            console.log(data);
+            $(this.el).html(this.template({data: data}));
             return this;
+        },
+
+        teacherlist: function  (item) {
+            console.log(item);
         }
     });
 

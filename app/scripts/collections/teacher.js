@@ -2,26 +2,13 @@
 
 define([
     'underscore',
-    'backbone'
-], function (_, Backbone) {
+    'backbone',
+    'models/teacher'
+], function (_, Backbone, TeacherModel) {
     'use strict';
 
     var TeacherCollection = Backbone.Collection.extend({
-
-        getData: function () {
-
-            var _this = this;
-
-            $.getJSON("../data/list.json", function(data) {
-                for (var i = data.length - 1; i >= 0; i--) {
-                    _this.add({major: data[i]});
-                };
-
-            });
-
-        }
-
-
+        model: TeacherModel
     });
 
     return TeacherCollection;

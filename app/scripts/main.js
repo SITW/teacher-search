@@ -37,23 +37,23 @@ require.config({
 require([
     'backbone',
     'routes/major',
-    'views/teacher',
-    'collections/teacher',
-    'models/teacher'
-], function (Backbone, majorRoute, teacherView, teachers, teacher) {
+    'views/majorlist',
+    'collections/majors',
+    'models/majoritem'
+], function (Backbone, majorRoute, majorlistView, majors, majorItem) {
 
     var majorRoute = new majorRoute();
 
     Backbone.history.start();
 
     // models
-    var teacher = new teacher();
+    var majorItem = new majorItem();
 
     // collections
-    var teachers = new teachers({model: teacher})
-    teachers.getData();
+    var majors = new majors({model: majorItem})
+    majors.getData();
 
     // views
-    var viewTeacherList = new teacherView({collection: teachers});
-    viewTeacherList.render();
+    var viewMajorList = new majorlistView({collection: majors});
+    viewMajorList.render();
 });
