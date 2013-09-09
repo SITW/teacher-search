@@ -2,27 +2,41 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'views/person',
     'views/teacher',
     'views/main'
-], function ($, _, Backbone, teacherView, mainView) {
+], function ($, _, Backbone, personView, teacherView, mainView) {
     'use strict';
 
     var majorRoute = Backbone.Router.extend({
 
         routes: {
             "major/:query": "queryTeacher",
-            "": "mainPage"
+            "major/:query/:person": "queryPerson",
+            "": "mainPage",
+
         },
 
         queryTeacher: function (query) {
-
             var _this = this;
 
             var teacherview = new teacherView();
             $.getJSON("../data/" + query + ".json", function(data) {
 
-                teacherview.render(data)
+                teacherview.render(data, query)
 
+            });
+        },
+
+        queryPerson: function (query, person) {
+            this.queryTeacher(query);
+
+            var personview = new personView();
+            $.getJSON("../data/" + query + ".json", function(data) {
+
+                var personData = _.where(data, {姓名: person});
+
+                personview.render(personData)
             });
         },
 

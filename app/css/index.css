@@ -3,6 +3,11 @@ body{
 	background-repeat: repeat;
 	margin: 0 auto;
 }
+
+th {
+    border: 1px solid #CCC;
+    padding: 10px;
+}
 .container{
     margin-top:6px;
 }
@@ -11,6 +16,16 @@ body{
     width: 800px;
     margin-right: auto;
     margin-left: auto;
+}
+
+#teacher_name_list {
+    width: 150px;
+    float: left;
+}
+
+#teacher_info {
+    width: 600px;
+    float: right;
 }
 
 .wrapper{
@@ -35,7 +50,7 @@ header{
 	padding-bottom: 1%;
 }
 /*header end*/
-td {
+#teacher_name_list td {
 	text-align: center;
 	line-height: 20px;
     width: 100px;

@@ -10,14 +10,12 @@ define([
 
     var TeacherView = Backbone.View.extend({
 
-        el: '#teacher_container',
+        el: '#teacher_name_list',
 
         template: JST['app/scripts/templates/teacher.ejs'],
 
-        render: function (data) {
-            console.log('render');
-            console.log(data);
-            $(this.el).html(this.template({data: data}));
+        render: function (data, major) {
+            $(this.el).html(this.template({data: data, major: major}));
             return this;
         }
     });
