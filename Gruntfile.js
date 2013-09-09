@@ -257,6 +257,15 @@ module.exports = function (grunt) {
                         'bower_components/**/*',
                         'scripts/**/*'
                     ]
+                },{
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp/scripts',
+                    dest: '<%= yeoman.dist %>/scripts',
+                    src: [
+                        '*'
+                    ]
+
                 }]
             }
         },
