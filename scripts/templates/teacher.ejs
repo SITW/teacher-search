@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>
+            老師姓名：
+        </th>
+
+    </tr>
+
+    <% for(var i=0; i< data.length; i++) { %>
+
+        <tr>
+            <td>
+                <a href="#major/<%= major %>/<%= data[i]["姓名"] %>">
+                <%= data[i]["姓名"] %>
+                </a>
+            </td>
+        </tr>
+
+    <% } %>
+
+
+</table>
