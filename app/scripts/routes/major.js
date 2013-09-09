@@ -18,6 +18,8 @@ define([
         },
 
         queryTeacher: function (query) {
+            $('#teacher_name_list').html('');
+            $('#teacher_info').html('');
             var _this = this;
 
             var teacherview = new teacherView();
@@ -29,6 +31,8 @@ define([
         },
 
         queryPerson: function (query, person) {
+            $('#teacher_name_list').html('');
+            $('#teacher_info').html('');
             this.queryTeacher(query);
 
             var personview = new personView();

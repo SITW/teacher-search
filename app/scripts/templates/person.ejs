@@ -8,23 +8,161 @@
             <%= personData[0]["姓名"] %>
         </td>
     </tr>
+
+    <tr>
         <th>
             學歷
         </th>
         <td>
-            <%= personData[0]["學歷"] %>
+            <% for(var i=0; i< personData[0]["學歷"].length; i++) { %>
+            <li><%= personData[0]["學歷"][i] %></li>
+            <% }%>
         </td>
+    </tr>
+
     <tr>
+        <th>
+            職稱
+        </th>
+        <td>
+            <%= personData[0]["職稱"] %>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            兼任職務(A. 期刊擔任職務)
+        </th>
+        <td>
+            <% for(var i=0; i< personData[0]["兼任職務"]["A. 期刊擔任職務"].length; i++) { %>
+            <li><%= personData[0]["兼任職務"]["A. 期刊擔任職務"][i] %></li>
+            <% }%>
+        </td>
 
     </tr>
 
     <tr>
 
+        <th>
+            兼任職務(B. 擔任機關職務)
+        </th>
+        <td>
+            <% for(var i=0; i< personData[0]["兼任職務"]["B. 擔任機關職務"].length; i++) { %>
+            <li><%= personData[0]["兼任職務"]["B. 擔任機關職務"][i] %></li>
+            <% }%>
+        </td>
     </tr>
 
     <tr>
 
+        <th>
+            學術活動(A. 受聘演講)
+        </th>
+        <td>
+            <% for(var i=0; i< personData[0]["學術活動"]["A. 受聘演講"].length; i++) { %>
+            <li><%= personData[0]["學術活動"]["A. 受聘演講"][i] %></li>
+            <% }%>
+        </td>
+
     </tr>
+
+    <tr>
+        <th>
+            學術活動(B. 邀請國內外學者)
+        </th>
+        <td>
+            <% for(var i=0; i< personData[0]["學術活動"]["B. 邀請國內外學者"].length; i++) { %>
+            <li><%= personData[0]["學術活動"]["B. 邀請國內外學者"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+    <tr>
+
+        <th>
+            專利
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["專利"].length; i++) { %>
+            <li><%= personData[0]["專利"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            專長及研究領域
+        </th>
+
+        <td>
+            <%= personData[0]["專長及研究領域"] %>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            著作(A. 期刊論文)
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["著作"]["A. 期刊論文"].length; i++) { %>
+            <li><%= personData[0]["著作"]["A. 期刊論文"][i] %></li>
+            <% }%>
+
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            著作(B. 研討會論文)
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["著作"]["B. 研討會論文"].length; i++) { %>
+            <li><%= personData[0]["著作"]["B. 研討會論文"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+
+    <tr>
+        <th>
+            著作(C. 專書)
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["著作"]["C. 專書"].length; i++) { %>
+            <li><%= personData[0]["著作"]["C. 專書"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            著作(D. Other publications)
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["著作"]["D. Other publications"].length; i++) { %>
+            <li><%= personData[0]["著作"]["D. Other publications"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            開授課程
+        </th>
+
+        <td>
+            <% for(var i=0; i< personData[0]["開授課程"].length; i++) { %>
+            <li><%= personData[0]["開授課程"][i] %></li>
+            <% }%>
+        </td>
+    </tr>
+
+
 
 
 </table>
