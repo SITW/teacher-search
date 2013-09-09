@@ -14,18 +14,11 @@ define([
 
         template: JST['app/scripts/templates/teacher.ejs'],
 
-        initialize: function () {
-        },
-
         render: function (data) {
             console.log('render');
             console.log(data);
             $(this.el).html(this.template({data: data}));
             return this;
-        },
-
-        teacherlist: function  (item) {
-            console.log(item);
         }
     });
 
