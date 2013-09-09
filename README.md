@@ -1,6 +1,6 @@
 # teacher-search
 
-using Knockback.js
+using Backbone.js
 
 ## Required
 
