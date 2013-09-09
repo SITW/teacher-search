@@ -18,6 +18,7 @@ define([
         },
 
         queryTeacher: function (query) {
+            $('#intro_container').hide();
             $('#teacher_name_list').html('');
             $('#teacher_info').html('');
             var _this = this;
@@ -31,6 +32,7 @@ define([
         },
 
         queryPerson: function (query, person) {
+            $('#intro_container').hide();
             $('#teacher_name_list').html('');
             $('#teacher_info').html('');
             this.queryTeacher(query);
