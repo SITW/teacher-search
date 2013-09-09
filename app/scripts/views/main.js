@@ -10,7 +10,7 @@ define([
 
     var MainView = Backbone.View.extend({
 
-        el: '#teacher_container',
+        el: '#intro_container',
 
         template: JST['app/scripts/templates/main.ejs'],
 
