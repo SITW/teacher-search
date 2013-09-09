@@ -1,0 +1,26 @@
+{
+  "name": "knockback",
+  "version": "0.17.2",
+  "main": "knockback.js",
+  "ignore": [
+    "**/.*",
+    "components",
+    "doc",
+    "media",
+    "node_modules",
+    "packages",
+    "test",
+    "vendor"
+  ],
+  "homepage": "https://github.com/kmalakoff/knockback",
+  "_release": "0.17.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.17.2",
+    "commit": "d4b2195a37177dd3ce3743002f37721497373e63"
+  },
+  "_source": "git://github.com/kmalakoff/knockback.git",
+  "_target": "~0.17.2",
+  "_originalSource": "knockback",
+  "_direct": true
+}
